@@ -55,7 +55,7 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
         gyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         magnet = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         press = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
-		ori = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+		// ori = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
 		heart = sensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
 		humidity = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
 		rotationVector = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
@@ -343,7 +343,7 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
 
 			// rotation matrix
             //Write the whole rotationMatrix R into the Listener.
-            StringBuffer sb();
+            StringBuilder sb = new StringBuilder();
 	    for (int i = 1; i < 8; i++) {
 	    	sb.append(R[i]);
 	    	sb.append(';');
